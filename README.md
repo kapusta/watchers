@@ -20,3 +20,7 @@ MIT
 
 * Original idea via [clouddueling's gist](https://gist.github.com/clouddueling/8853332)
 * bookmarklet.js built using [gruber's perl script](https://gist.github.com/gruber/8658935)
+
+### Changelog
+
+0.0.1 - first release, removed jQuery dependency
