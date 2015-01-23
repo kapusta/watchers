@@ -25,8 +25,7 @@ for ($bookmarklet) {
 }
 
 # Escape single- and double-quotes, spaces, control chars, unicode:
-$bookmarklet = "javascript:" .
-  uri_escape_utf8($bookmarklet, qq(%'" \x00-\x1f\x7f-\xff));
+$bookmarklet = "javascript:" . uri_escape_utf8($bookmarklet, qq(%'" \x00-\x1f\x7f-\xff));
 
 print "$bookmarklet";
 

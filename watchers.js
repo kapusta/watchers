@@ -1,7 +1,9 @@
-(function(ng){
+(function(ng, doc){
   if (ng) {
-    var app = ng.element('[ng-app]');
-    if (app.length) {
+    var appNodeList = doc.querySelectorAll('[ng-app]');
+    var apps = Array.prototype.slice.call(appNodeList);
+    apps.map(function(val, idx, arr) {
+      var app = ng.element(val);
       var watchers = [];
       var f = function(app) {
         if (app.data().hasOwnProperty('$scope')) {
@@ -14,11 +16,9 @@
         });
       };
       f(app);
-      console.log("'"+app.attr('ng-app')+"'"+" has "+watchers.length+" watchers");
-    } else {
-      console.log('no ng-app defined');
-    }
+      console.log(app.attr('ng-app') + " has " + watchers.length + " watchers.");
+    });
   } else {
     console.log('angular not found');
   }
-}(window.angular));
+}(window.angular, window.document));
