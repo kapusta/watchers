@@ -29,5 +29,5 @@ MIT
 
 ### Changelog
 
-0.0.2 - using querySelectorAll and jqLite, support for multiple Angular apps
-0.0.1 - first release, removed jQuery dependency
+* 0.0.2 - using querySelectorAll and jqLite, support for multiple Angular apps
+* 0.0.1 - first release, removed jQuery dependency
